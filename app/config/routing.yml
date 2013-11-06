@@ -1,0 +1,4 @@
+jira_vacuum:
+    resource: "@JiraVacuumBundle/Resources/config/routing.yml"
+    prefix:   /
+
