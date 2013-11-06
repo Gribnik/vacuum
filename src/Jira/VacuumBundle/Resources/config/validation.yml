@@ -1,0 +1,6 @@
+Jira\VacuumBundle\Entity\Login:
+    properties:
+        login:
+            - NotBlank: ~
+        password:
+            - NotBlank: ~

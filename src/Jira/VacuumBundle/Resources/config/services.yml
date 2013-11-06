@@ -1,0 +1,7 @@
+parameters:
+#    jira_vacuum.example.class: Jira\VacuumBundle\Example
+
+services:
+#    jira_vacuum.example:
+#        class: %jira_vacuum.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

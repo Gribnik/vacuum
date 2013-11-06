@@ -1,0 +1,11 @@
+login:
+    pattern:  /login
+    defaults: { _controller: JiraVacuumBundle:Default:login }
+    methods:  [GET]
+login_process:
+    pattern:  /login
+    defaults: { _controller: JiraVacuumBundle:Default:loginProcess }
+    methods:  [POST]
+index:
+    pattern: /dashboard
+    defaults: { _controller: JiraVacuumBundle:Default:index }
