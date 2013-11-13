@@ -7,6 +7,7 @@ use Jira\VacuumBundle\Entity\Login;
 //use Symfony\Component\BrowserKit\Response;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\DependencyInjection\ContainerBuilder;
 
 
 class DefaultController extends Controller
@@ -43,6 +44,9 @@ class DefaultController extends Controller
         $form->handleRequest($request);
 
         if ($form->isValid()) {
+            /** @var \Requester $requester */
+            $requester = $this->get("requester");
+            $requester->loginRequest($request);
             return $this->redirect($this->generateUrl('index'));
         } else {
             return $this->render('JiraVacuumBundle:Login:login.html.twig', array(
